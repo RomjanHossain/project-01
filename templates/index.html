@@ -61,12 +61,13 @@
           	<div class="text text-center">
 	            <h1 class="mb-4">The Simplest <br>Way to Find Property</h1>
 	            <p style="font-size: 18px;">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
-	            <form action="#" class="search-location mt-md-5">
+	            <form action="{% url 'gallery' %}" class="search-location mt-md-5" method="post">
 		        		<div class="row justify-content-center">
 		        			<div class="col-lg-10 align-items-end">
 		        				<div class="form-group">
 		          				<div class="form-field">
-				                <input type="text" class="form-control" placeholder="Search location">
+                                    {% csrf_token %}
+				                <input type="text" class="form-control" placeholder="Search location" name="get_search">
 				                <button><span class="ion-ios-search"></span></button>
 				              </div>
 			              </div>
@@ -591,7 +592,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="#" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by Colorlib
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

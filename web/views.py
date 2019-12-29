@@ -8,4 +8,6 @@ def home(request):
 
 
 def gallery(request):
+    search = request.POST.get('get_search')
+    print(search)
     return render(request, 'gallery/index.html')
